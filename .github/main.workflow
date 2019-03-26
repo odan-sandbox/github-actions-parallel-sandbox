@@ -8,7 +8,7 @@ workflow "New workflow" {
 
 action "Sleep 1" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  args = "ls -l"
+  args = "sleep 1"
   runs = "bash -c"
 }
 
