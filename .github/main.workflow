@@ -8,7 +8,7 @@ workflow "New workflow" {
 
 action "Sleep 1" {
   uses = "actions/bin/sh@master"
-  args = ["sleep", "--help"]
+  args = "sleep --help"
 }
 
 action "check" {
