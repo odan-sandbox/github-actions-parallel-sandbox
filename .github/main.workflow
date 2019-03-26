@@ -14,7 +14,7 @@ action "Sleep 1" {
 action "check" {
   uses = "actions/bin/sh@master"
   needs = ["Sleep 1"]
-  args = "cat poyo.txt"
+  args = ["cat poyo.txt"]
 }
 
 action "Sleep2" {
