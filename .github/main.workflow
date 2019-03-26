@@ -7,20 +7,17 @@ workflow "New workflow" {
 }
 
 action "Sleep 1" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  uses = "actions/bin/sh@master"
   args = ["sleep", "--help"]
-  runs = []
 }
 
 action "check" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  uses = "actions/bin/sh@master"
   needs = ["Sleep 1"]
-  runs = "bash"
   args = "cat poyo.txt"
 }
 
 action "Sleep2" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  runs = "bash -c"
+  uses = "actions/bin/sh@master"
   args = "sleep --help"
 }
