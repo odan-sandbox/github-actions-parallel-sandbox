@@ -8,7 +8,7 @@ workflow "New workflow" {
 
 action "Sleep 1" {
   uses = "actions/bin/sh@master"
-  args = ["sleep --help"]
+  args = ["sleep 1", "echo 1 > poyo.txt"]
 }
 
 action "check" {
@@ -19,5 +19,5 @@ action "check" {
 
 action "Sleep2" {
   uses = "actions/bin/sh@master"
-  args = ["sleep --help"]
+  args = ["sleep 2", "echo 2 > poyo.txt"]
 }
